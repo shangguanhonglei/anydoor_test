@@ -1,0 +1,8 @@
+# .npmignore默认会忽略很多文件及文件夹，但是也会默认不忽略很多文件及文件夹，详情请见
+
+# 忽略node_modules
+node_modules
+# 忽略源码目录
+src
+# 忽略单元测试目录
+test

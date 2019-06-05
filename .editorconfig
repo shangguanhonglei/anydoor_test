@@ -1,0 +1,23 @@
+
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+# Apply for all files
+[*]
+
+charset = utf-8
+
+indent_style = space
+indent_size = 2
+# 换行的方式
+end_of_line = lf
+# 在末尾插入新行
+insert_final_newline = true
+# 去掉一行末尾的空格
+trim_trailing_whitespace = true
+
+[*.json]
+indent_size = 4
