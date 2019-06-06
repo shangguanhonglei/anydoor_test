@@ -1,0 +1,31 @@
+{
+  "name": "anydoor",
+  "version": "1.0.0",
+  "description": "读取项目目录",
+  "main": "src/index.js",
+  "scripts": {
+    "eslint": "eslint ./src/*.js",
+    "eslint-fix": "eslint --fix ./src/*.js"
+  },
+  "pre-commit": [
+    "eslint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shangguanhonglei/anydoor.git"
+  },
+  "keywords": [
+    "自由门"
+  ],
+  "author": "lulin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shangguanhonglei/anydoor/issues"
+  },
+  "homepage": "https://github.com/shangguanhonglei/anydoor#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "pre-commit": "^1.2.2"
+  }
+}
