@@ -2,6 +2,7 @@
 /* eslint-disable-next-line no-console */
 console.log()
 debugger/* eslint-disable-line no-debugger */
+debugger/* eslint-disable-line no-debugger */
 let a = 2
 switch(a){
 case 2:
