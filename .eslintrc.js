@@ -23,7 +23,7 @@ module.exports = {
     //规则的值为关闭：off或0,警告：warn或1,错误：error或2
     "rules": {
       //禁止输入console
-      "no-console": "error",
+      "no-console": "off",
       "no-alert": "error",
       //禁止输入分号
       "semi": [
