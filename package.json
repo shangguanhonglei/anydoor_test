@@ -6,10 +6,12 @@
   "scripts": {
     "start": "supervisor ./src/app.js",
     "eslint": "eslint ./src/*.js",
-    "eslint-fix": "eslint --fix ./src/*.js"
+    "eslint-fix": "eslint --fix ./src/*.js",
+    "stylelint": "stylelint ./src/*.*"
   },
   "pre-commit": [
-    "eslint"
+    "eslint",
+    "stylelint"
   ],
   "repository": {
     "type": "git",
@@ -28,7 +30,8 @@
     "babel-eslint": "^10.0.1",
     "chalk": "^2.4.2",
     "eslint": "^5.16.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "stylelint": "^10.1.0"
   },
   "dependencies": {
     "handlebars": "^4.1.2"
