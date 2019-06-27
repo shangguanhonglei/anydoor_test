@@ -1,9 +1,11 @@
 const fs = require('fs')
 const handlebars = require('handlebars')
 const path = require('path')
-const source = require(path.resolve(__dirname,'../template/dir'))
 const promisify = require('util').promisify
-//将回调改造成异步
+const source = fs.readFileSync(path.join(__dirname,'../template/dir.tpl'),'utf-8')
+const template = handlebars.compile(source)
+const mime = require('./mime')
+//将回调函数改造成异步
 const stat = promisify(fs.stat)
 const readdir = promisify(fs.readdir)
 module.exports = async function(req,res,filePath){
@@ -13,7 +15,7 @@ module.exports = async function(req,res,filePath){
     //检测是否是一个文件
     if (stats.isFile()) {
       res.statusCode = 200
-      res.setHeader('Content-Type', 'text/plain')
+      res.setHeader('Content-Type', mime(filePath)) //通过文件名后缀获取文件对应的Conten-Type
       fs.createReadStream(filePath).pipe(res)
     }
     //检测是否是一个目录
@@ -21,10 +23,16 @@ module.exports = async function(req,res,filePath){
       const files = await readdir(filePath)
       res.statusCode = 200
       res.setHeader('Content-Type', 'text/html')
-      const template = handlebars.compile(source)
+      const dir = path.relative(process.cwd(),filePath)//解析为相对于app.js的相对路径
       const context = {
         title: 'anydoor目录结构',
-        files
+        dir: dir ? `/${dir}` : '',
+        files:files.map((file)=>{
+          return {
+            file,
+            icon: mime(file)
+          }
+        })
       }
       res.end(template(context))
     }

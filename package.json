@@ -7,7 +7,7 @@
     "start": "supervisor ./src/app.js",
     "eslint": "eslint ./src/*.js",
     "eslint-fix": "eslint --fix ./src/*.js",
-    "stylelint": "stylelint ./src/*.*"
+    "stylelint": "stylelint ./src/*.scss"
   },
   "pre-commit": [
     "eslint",
