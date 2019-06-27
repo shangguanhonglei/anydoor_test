@@ -5,10 +5,12 @@
   "main": "src/index.js",
   "scripts": {
     "eslint": "eslint ./src/*.js",
-    "eslint-fix": "eslint --fix ./src/*.js"
+    "eslint-fix": "eslint --fix ./src/*.js",
+    "stylelint":"stylelint ./src/*.*"
   },
   "pre-commit": [
-    "eslint"
+    "eslint",
+
   ],
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "stylelint": "^10.1.0",
+    "stylelint-scss": "^3.8.0"
   }
 }

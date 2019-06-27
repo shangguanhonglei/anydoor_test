@@ -1,5 +1,5 @@
 
-/* eslint-disable-next-line no-console */
+/* eslint-disable no-console*/
 console.log()
 debugger/* eslint-disable-line no-debugger */
 debugger/* eslint-disable-line no-debugger */
