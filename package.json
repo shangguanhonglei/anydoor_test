@@ -2,12 +2,13 @@
   "name": "anydoor",
   "version": "1.0.0",
   "description": "读取项目目录",
-  "main": "src/index.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "supervisor ./src/app.js",
-    "eslint": "eslint ./src/*.js",
-    "eslint-fix": "eslint --fix ./src/*.js",
-    "stylelint": "stylelint ./src/*.scss"
+    "eslint": "eslint ./src/**/*.js",
+    "eslint-fix": "eslint --fix ./src/**/*.js",
+    "stylelint": "stylelint ./src/**/*.scss",
+    "stylelint-fix": "stylelint ./src/**/*.scss --fix"
   },
   "pre-commit": [
     "eslint",
