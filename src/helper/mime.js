@@ -9,6 +9,7 @@ const mimeTypes = {
   txt: 'text/plain'
 
 }
+//根据文件后缀获取文件类型
 module.exports = (filePath) =>{
   let ext = path.extname(filePath).split('.').pop().toLowerCase()
   if(!ext){
