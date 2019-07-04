@@ -18,12 +18,15 @@ module.exports = async function(req,res,filePath){
     const stats = await stat(filePath)
     //检测是否是一个文件
     if (stats.isFile()) {
-      res.setHeader('Content-Type', mime(filePath)) //通过文件名后缀获取文件对应的Conten-Type
+      //根据文件后缀判断Content-Type的类型
+      res.setHeader('Content-Type', mime(filePath))
+      //如果开启缓存，则不返回数据同时状态置为304
       if(cache(stats,req,res)){
         res.statusCode = 304
         res.end()
         return
       }
+      //提供客户端分段请求数据
       const { code,start,end } = range(stats.size,req,res)
       res.statusCode = code
       let rs

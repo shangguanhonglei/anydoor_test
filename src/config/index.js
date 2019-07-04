@@ -4,9 +4,9 @@ module.exports = {
   compress: /\.(html|js|css|md)$/,
   cache:{
     maxAge: 600,
-    expires: true,
-    cacheControl: true,
-    lastModified: true,
-    etag: true,
+    expires: false,//属于强制缓存，但本身存在缺陷
+    cacheControl: false,//属于强制缓存
+    lastModified: false,//属于协商缓存
+    etag: true,//属于协商缓存
   }
 }
