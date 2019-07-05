@@ -1,8 +1,11 @@
 {
   "name": "anydoor",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "读取项目目录",
   "main": "src/app.js",
+  "bin": {
+      "anydoor": "bin/anydoor"
+  },
   "scripts": {
     "start": "supervisor ./src/app.js",
     "eslint": "eslint ./src/**/*.js",
@@ -32,7 +35,8 @@
     "chalk": "^2.4.2",
     "eslint": "^5.16.0",
     "pre-commit": "^1.2.2",
-    "stylelint": "^10.1.0"
+    "stylelint": "^10.1.0",
+    "yargs": "^13.2.4"
   },
   "dependencies": {
     "handlebars": "^4.1.2"

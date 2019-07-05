@@ -6,13 +6,12 @@ const source = fs.readFileSync(path.join(__dirname,'../template/dir.tpl'),'utf-8
 const template = handlebars.compile(source)
 const mime = require('./mime')
 const compress = require('./compress')
-const config = require('../config')
 const range = require('./range')
 const cache = require('./cache')
 //将回调函数改造成异步
 const stat = promisify(fs.stat)
 const readdir = promisify(fs.readdir)
-module.exports = async function(req,res,filePath){
+module.exports = async function(req,res,filePath,config){
   try {
     //检测文件或目录是否存在
     const stats = await stat(filePath)

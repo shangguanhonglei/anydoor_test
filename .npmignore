@@ -2,7 +2,10 @@
 
 # 忽略node_modules
 node_modules
-# 忽略源码目录
-src
 # 忽略单元测试目录
 test
+.editorconfig
+.eslintignore
+.eslintrc.js
+.vscode
+.stylelintrc.json
