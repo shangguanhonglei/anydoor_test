@@ -1,6 +1,6 @@
 {
   "name": "anydoor_test_lulin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "读取项目目录",
   "main": "src/app.js",
   "bin": {
@@ -32,13 +32,13 @@
   "homepage": "https://github.com/shangguanhonglei/anydoor#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "chalk": "^2.4.2",
     "eslint": "^5.16.0",
     "pre-commit": "^1.2.2",
-    "stylelint": "^10.1.0",
-    "yargs": "^13.2.4"
+    "stylelint": "^10.1.0"
   },
   "dependencies": {
-    "handlebars": "^4.1.2"
+    "handlebars": "^4.1.2",
+    "chalk": "^2.4.2",
+    "yargs": "^13.2.4"
   }
 }
