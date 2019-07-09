@@ -4,10 +4,10 @@
   "description": "读取项目目录",
   "main": "src/app.js",
   "bin": {
-      "anydoor": "bin/anydoor"
+    "anydoor": "bin/anydoor"
   },
   "scripts": {
-    "start": "supervisor ./src/app.js",
+    "start": "supervisor ./src/index.js",
     "eslint": "eslint ./src/**/*.js",
     "eslint-fix": "eslint --fix ./src/**/*.js",
     "stylelint": "stylelint ./src/**/*.scss",
