@@ -3,21 +3,22 @@
 # coding styles between different editors and IDEs
 # editorconfig.org
 
+# 在编辑一个文件时会从当前目录向外寻找.editorconfig配置文件直到找到某个.editorconfig文件其root = true
 root = true
 
-# Apply for all files
+# 标识此配置适用于所有文件
 [*]
-
+# 文件适用的编码格式
 charset = utf-8
-
+# 一个tab是两个空格，标识缩进
 indent_style = space
 indent_size = 2
 # 换行的方式
-end_of_line = lf
+end_of_line = lf # 标识linux换行
 # 在末尾插入新行
 insert_final_newline = true
 # 去掉一行末尾的空格
 trim_trailing_whitespace = true
-
+# 对于.json文件使用4个空格缩进
 [*.json]
 indent_size = 4

@@ -14,7 +14,7 @@ module.exports = {
     "globals": {
       "window": true
     },
-    //检测滚则使用"babel-eslint"，babel可以验证es6语法
+    //检测规则使用"babel-eslint"，babel可以验证es6语法
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaVersion": 2018,

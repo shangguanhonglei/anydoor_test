@@ -2,13 +2,9 @@
 /* eslint-disable no-console*/
 console.log()
 debugger/* eslint-disable-line no-debugger */
-debugger/* eslint-disable-line no-debugger */
 let a = 2
 switch(a){
 case 2:
-
-
-
   break
 }
 alert(123)/* eslint-disable-line no-alert */
