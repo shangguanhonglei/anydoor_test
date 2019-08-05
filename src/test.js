@@ -1,4 +1,4 @@
-
+// eslint实践
 /* eslint-disable no-console*/
 console.log()
 debugger/* eslint-disable-line no-debugger */

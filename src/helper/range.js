@@ -25,5 +25,4 @@ module.exports = (totalSize,req,res)=>{
     start: parseInt(start),
     end: parseInt(end)
   }
-
 }
