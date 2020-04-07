@@ -18,6 +18,7 @@ module.exports = async function(req,res,filePath,config){
     //检测是否是一个文件
     if (stats.isFile()) {
       //根据文件后缀判断Content-Type的类型
+
       res.setHeader('Content-Type', mime(filePath))
       //如果开启缓存，则不返回数据同时状态置为304
       if(cache(stats,req,res)){
