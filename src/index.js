@@ -1,7 +1,7 @@
 //用户在终端运行anydoor时可以自定义参数
 const yargs = require('yargs')
 const Server = require('./app')
-const argv = yargs.usage('anywhere [options]')
+const argv = yargs
   .option('p', {
     alias: 'port',//和config.js中port名字保持一致
     describe: '端口号',
